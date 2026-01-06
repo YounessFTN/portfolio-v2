@@ -35,7 +35,7 @@ const social: Social = [
   {
     name: "Resume",
     icon: "resume",
-    link: "https://github.com/YounessFTN",
+    link: "/images/CV-Youness-Fatine.pdf",
     essential: true,
   },
   {
@@ -117,7 +117,7 @@ const about: About = {
   },
   calendar: {
     display: true,
-    link: "https://cal.com",
+    link: "https://cal.com/youness-fatine/entretien",
   },
   intro: {
     display: true,
@@ -140,14 +140,14 @@ const about: About = {
         timeframe: "2022 - Present",
         role: "Senior Design Engineer",
         achievements: [
-          <>
+          <p>
             Redesigned the UI/UX for the FLY platform, resulting in a 20%
             increase in user engagement and 30% faster load times.
-          </>,
-          <>
+          </p>,
+          <p>
             Spearheaded the integration of AI tools into design workflows,
             enabling designers to iterate 50% faster.
-          </>,
+          </p>,
         ],
         images: [
           // optional: leave the array empty if you don't want to display images
@@ -164,14 +164,14 @@ const about: About = {
         timeframe: "2018 - 2022",
         role: "Lead Designer",
         achievements: [
-          <>
+          <p>
             Developed a design system that unified the brand across multiple
             platforms, improving design consistency by 40%.
-          </>,
-          <>
+          </p>,
+          <p>
             Led a cross-functional team to launch a new product line,
             contributing to a 15% increase in overall company revenue.
-          </>,
+          </p>,
         ],
         images: [],
       },
