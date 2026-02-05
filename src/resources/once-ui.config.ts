@@ -32,9 +32,7 @@ const display: DisplayConfig = {
 
 // Enable password protection on selected routes
 // Set password in the .env file, refer to .env.example
-const protectedRoutes: ProtectedRoutesConfig = {
-  "/work/automate-design-handovers-with-a-figma-to-code-pipeline": true,
-};
+const protectedRoutes: ProtectedRoutesConfig = {};
 
 // Import and set font for each variant
 import { Geist, Geist_Mono } from "next/font/google";
@@ -187,16 +185,16 @@ const mailchimp: MailchimpConfig = {
 const schema: SchemaConfig = {
   logo: "",
   type: "Organization",
-  name: "Youness Fatein",
+  name: "Youness Fatine",
   description: home.description,
-  email: "youness.fatine1@gmail.com",
+  email: "youness@fatine.fr",
 };
 
 // social links
 const sameAs: SameAsConfig = {
-  threads: "#",
+  threads: "",
   linkedin: "https://www.linkedin.com/in/youness-fatine-developpeur-lyon/",
-  discord: "#",
+  discord: "",
 };
 
 // social sharing configuration for blog posts

@@ -14,12 +14,12 @@ const person: Person = {
   firstName: "Youness",
   lastName: "Fatine",
   name: `Youness Fatine`,
-  business: "Mintfull Agency",
-  role: "full stack developer",
+  business: "Freelance",
+  role: "Développeur Web & Designer",
   avatar: "/images/avatar.webp",
-  email: "youness.fatine1@gmail.com",
-  location: "Europe/Paris", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
-  languages: ["Français", "Italien", "Anglais"], // optional: Leave the array empty if you don't want to display languages
+  email: "youness@fatine.fr",
+  location: "Europe/Paris",
+  languages: ["Français", "Italien", "Anglais"],
 };
 
 const newsletter: Newsletter = {
@@ -29,9 +29,6 @@ const newsletter: Newsletter = {
 };
 
 const social: Social = [
-  // Links are automatically displayed.
-  // Import new icons in /once-ui/icons.ts
-  // Set essentials: true for links you want to show on the about page
   {
     name: "Resume",
     icon: "resume",
@@ -51,18 +48,6 @@ const social: Social = [
     essential: true,
   },
   {
-    name: "Instagram",
-    icon: "instagram",
-    link: "#",
-    essential: false,
-  },
-  {
-    name: "Threads",
-    icon: "threads",
-    link: "#",
-    essential: false,
-  },
-  {
     name: "Email",
     icon: "email",
     link: `mailto:${person.email}`,
@@ -76,38 +61,37 @@ const home: Home = {
   label: "Accueil",
   title: `Portfolio de ${person.name}`,
   description: `Site portfolio présentant mon travail en tant que ${person.role}`,
-  headline: <>Créer des ponts entre le design et le code</>,
+  headline: <>Créer des expériences numériques exceptionnelles</>,
   featured: {
     display: true,
     title: (
       <Row gap="12" vertical="center">
-        <strong className="ml-4">Portfolio</strong>{" "}
+        <strong className="ml-4">Projet</strong>{" "}
         <Line background="brand-alpha-strong" vert height="20" />
         <Text marginRight="4" onBackground="brand-medium">
-          Projets à la une
+          Projet à la une
         </Text>
       </Row>
     ),
-    href: "/work/building-once-ui-a-customizable-design-system",
+    href: "/work/iberic-x",
   },
   subline: (
     <>
-      Je suis {person.name}, {person.role} chez{" "}
+      Salut, je suis {person.name},{" "}
       <Text as="span" size="xl" weight="strong">
-        {person.business}
-      </Text>
-      , où je conçois des expériences utilisateur intuitives.
-      <br />
-      En dehors du travail, je développe mes propres projets.
+        {person.role}
+      </Text>{" "}
+      basé à Lyon. Passionné par le front-end, je conçois des interfaces
+      modernes et des expériences utilisateur intuitives.
     </>
   ),
 };
 
 const about: About = {
   path: "/about",
-  label: "About",
-  title: `About – ${person.name}`,
-  description: `Meet ${person.name}, ${person.role} from ${person.location}`,
+  label: "À propos",
+  title: `À propos – ${person.name}`,
+  description: `Découvrez ${person.name}, ${person.role} basé à Lyon`,
   tableOfContent: {
     display: true,
     subItems: false,
@@ -124,132 +108,83 @@ const about: About = {
     title: "Introduction",
     description: (
       <>
-        Selene is a Jakarta-based design engineer with a passion for
-        transforming complex challenges into simple, elegant design solutions.
-        Her work spans digital interfaces, interactive experiences, and the
-        convergence of design and technology.
+        Né en Italie, j'ai grandi entre deux cultures avant de m'installer en
+        France à l'âge de huit ans, où j'ai décroché mon brevet, mon bac et
+        l'Esabac. Passionné par le sport — notamment le basket et le surf — j'ai
+        découvert en terminale une nouvelle passion : l'informatique, et plus
+        spécifiquement le développement front-end. C'est là que j'ai trouvé mon
+        terrain de jeu, explorant les aspects créatifs et innovants du
+        développement web.
       </>
     ),
   },
   work: {
-    display: true, // set to false to hide this section
-    title: "Work Experience",
-    experiences: [
-      {
-        company: "FLY",
-        timeframe: "2022 - Present",
-        role: "Senior Design Engineer",
-        achievements: [
-          <p>
-            Redesigned the UI/UX for the FLY platform, resulting in a 20%
-            increase in user engagement and 30% faster load times.
-          </p>,
-          <p>
-            Spearheaded the integration of AI tools into design workflows,
-            enabling designers to iterate 50% faster.
-          </p>,
-        ],
-        images: [
-          // optional: leave the array empty if you don't want to display images
-          {
-            src: "/images/projects/project-01/cover-01.jpg",
-            alt: "Once UI Project",
-            width: 16,
-            height: 9,
-          },
-        ],
-      },
-      {
-        company: "Creativ3",
-        timeframe: "2018 - 2022",
-        role: "Lead Designer",
-        achievements: [
-          <p>
-            Developed a design system that unified the brand across multiple
-            platforms, improving design consistency by 40%.
-          </p>,
-          <p>
-            Led a cross-functional team to launch a new product line,
-            contributing to a 15% increase in overall company revenue.
-          </p>,
-        ],
-        images: [],
-      },
-    ],
+    display: false,
+    title: "Expérience professionnelle",
+    experiences: [],
   },
   studies: {
-    display: true, // set to false to hide this section
-    title: "Studies",
+    display: true,
+    title: "Formation",
     institutions: [
       {
-        name: "University of Jakarta",
-        description: <>Studied software engineering.</>,
+        name: "WebTech Institute",
+        description: (
+          <>
+            Formation en développement web et technologies digitales. Projets
+            pratiques incluant du développement front-end, back-end et IoT.
+          </>
+        ),
       },
       {
-        name: "Build the Future",
-        description: <>Studied online marketing and personal branding.</>,
+        name: "Lycée — Bac & Esabac",
+        description: (
+          <>
+            Obtention du Baccalauréat et de l'Esabac (double diplôme
+            franco-italien).
+          </>
+        ),
       },
     ],
   },
   technical: {
-    display: true, // set to false to hide this section
-    title: "Technical skills",
+    display: true,
+    title: "Compétences techniques",
     skills: [
       {
-        title: "Figma",
+        title: "Front-end",
         description: (
-          <>Able to prototype in Figma with Once UI with unnatural speed.</>
+          <>
+            Développement d'interfaces modernes et réactives avec React,
+            Next.js, Tailwind CSS et SCSS.
+          </>
         ),
         tags: [
-          {
-            name: "Figma",
-            icon: "figma",
-          },
+          { name: "React", icon: "javascript" },
+          { name: "Next.js", icon: "nextjs" },
         ],
-        // optional: leave the array empty if you don't want to display images
-        images: [
-          {
-            src: "/images/projects/project-01/cover-02.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-          {
-            src: "/images/projects/project-01/cover-03.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-        ],
+        images: [],
       },
       {
-        title: "Next.js",
+        title: "Back-end",
         description: (
-          <>Building next gen apps with Next.js + Once UI + Supabase.</>
+          <>
+            Construction d'API robustes et évolutives avec Node.js, PHP et SQL.
+          </>
         ),
-        tags: [
-          {
-            name: "JavaScript",
-            icon: "javascript",
-          },
-          {
-            name: "Next.js",
-            icon: "nextjs",
-          },
-          {
-            name: "Supabase",
-            icon: "supabase",
-          },
-        ],
-        // optional: leave the array empty if you don't want to display images
-        images: [
-          {
-            src: "/images/projects/project-01/cover-04.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-        ],
+        tags: [{ name: "Node.js", icon: "javascript" }],
+        images: [],
+      },
+      {
+        title: "Design & Prototypage",
+        description: (
+          <>
+            Conception de maquettes UX/UI, chartes graphiques et prototypes
+            interactifs avec Figma et intégration d'éléments 3D.
+          </>
+        ),
+        tags: [{ name: "Figma", icon: "figma" }],
+        images: [],
       },
     ],
   },
@@ -258,70 +193,23 @@ const about: About = {
 const blog: Blog = {
   path: "/blog",
   label: "Blog",
-  title: "Writing about design and tech...",
-  description: `Read what ${person.name} has been up to recently`,
-  // Create new blog posts by adding a new .mdx file to app/blog/posts
-  // All posts will be listed on the /blog route
+  title: "Articles sur le design et la tech",
+  description: `Découvrez les dernières publications de ${person.name}`,
 };
 
 const work: Work = {
   path: "/work",
-  label: "Work",
-  title: `Projects – ${person.name}`,
-  description: `Design and dev projects by ${person.name}`,
-  // Create new project pages by adding a new .mdx file to app/blog/posts
-  // All projects will be listed on the /home and /work routes
+  label: "Projets",
+  title: `Projets – ${person.name}`,
+  description: `Projets de design et développement par ${person.name}`,
 };
 
 const gallery: Gallery = {
   path: "/gallery",
-  label: "Gallery",
-  title: `Photo gallery – ${person.name}`,
-  description: `A photo collection by ${person.name}`,
-  // Images by https://lorant.one
-  // These are placeholder images, replace with your own
-  images: [
-    {
-      src: "/images/gallery/horizontal-1.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/vertical-4.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
-    {
-      src: "/images/gallery/horizontal-3.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/vertical-1.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
-    {
-      src: "/images/gallery/vertical-2.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
-    {
-      src: "/images/gallery/horizontal-2.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/horizontal-4.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/vertical-3.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
-  ],
+  label: "Galerie",
+  title: `Galerie photo – ${person.name}`,
+  description: `Une collection de photos par ${person.name}`,
+  images: [],
 };
 
 export { about, blog, gallery, home, newsletter, person, social, work };
