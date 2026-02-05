@@ -219,47 +219,77 @@ const about: About = {
         title: "Front-end",
         description: (
           <>
-            React, Next.js, Vue.js, JavaScript, TypeScript, HTML, CSS, SCSS,
-            Tailwind CSS, Bootstrap, React Native.
+            Développement d'interfaces modernes, réactives et performantes.
           </>
         ),
         tags: [
-          { name: "React", icon: "javascript" },
+          { name: "React", icon: "react" },
           { name: "Next.js", icon: "nextjs" },
+          { name: "Vue.js", icon: "vuejs" },
+          { name: "JavaScript", icon: "javascript" },
+          { name: "TypeScript", icon: "typescript" },
+          { name: "HTML5", icon: "html5" },
+          { name: "CSS3", icon: "css3" },
+          { name: "SCSS", icon: "sass" },
+          { name: "Tailwind CSS", icon: "tailwindcss" },
+          { name: "Bootstrap", icon: "bootstrap" },
         ],
         images: [],
       },
       {
         title: "Back-end",
         description: (
-          <>Node.js, PHP, Symfony, Python, Django, SQL, Prisma, API REST.</>
+          <>Construction d'API robustes et évolutives.</>
         ),
-        tags: [{ name: "Node.js", icon: "javascript" }],
+        tags: [
+          { name: "Node.js", icon: "nodejs" },
+          { name: "PHP", icon: "php" },
+          { name: "Symfony", icon: "symfony" },
+          { name: "Python", icon: "python" },
+          { name: "Django", icon: "django" },
+          { name: "Java", icon: "java" },
+          { name: "Spring Boot", icon: "springboot" },
+          { name: "SQL", icon: "mysql" },
+          { name: "Prisma", icon: "prisma" },
+        ],
         images: [],
       },
       {
         title: "CMS & E-commerce",
         description: (
-          <>WordPress, Webflow, Shopify, PrestaShop, Oxygen Builder.</>
+          <>Création de sites vitrines et boutiques en ligne.</>
         ),
-        tags: [],
+        tags: [
+          { name: "WordPress", icon: "wordpress" },
+          { name: "Webflow", icon: "webflow" },
+          { name: "Shopify", icon: "shopify" },
+          { name: "PrestaShop", icon: "prestashop" },
+        ],
         images: [],
       },
       {
         title: "Design & Prototypage",
         description: (
           <>
-            Figma, Photoshop, Illustrator, Spline (3D), montage vidéo. Chartes
-            graphiques, design systems, maquettes UX/UI.
+            Conception de maquettes UX/UI, chartes graphiques et création 3D.
           </>
         ),
-        tags: [{ name: "Figma", icon: "figma" }],
+        tags: [
+          { name: "Figma", icon: "figma" },
+          { name: "Photoshop", icon: "photoshop" },
+          { name: "Illustrator", icon: "illustrator" },
+        ],
         images: [],
       },
       {
         title: "DevOps & Outils",
-        description: <>Docker, Git, GitHub, n8n, cal.com, Tally, Stripe.</>,
-        tags: [{ name: "GitHub", icon: "github" }],
+        description: <>Déploiement, versioning et automatisation.</>,
+        tags: [
+          { name: "Docker", icon: "docker" },
+          { name: "Git", icon: "git" },
+          { name: "GitHub", icon: "github" },
+          { name: "Stripe", icon: "stripe" },
+        ],
         images: [],
       },
     ],
