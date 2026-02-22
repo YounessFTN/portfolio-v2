@@ -322,8 +322,8 @@ const gallery: Gallery = {
 const cv = {
   path: "/cv",
   label: "CV",
-  title: "CV",
-  description: `Curriculum Vitae de ${person.name} - ${person.role}`,
+  title: `CV de ${person.name} - ${person.role}`,
+  description: `Consultez et téléchargez le CV de ${person.name}, ${person.role}. Découvrez mon parcours, mes compétences techniques et mes expériences professionnelles.`,
   // Chemin vers le fichier PDF (relatif à /public)
   file: "/images/CV-Youness-Fatine-V2.pdf",
   // Nom du fichier lors du téléchargement

@@ -105,7 +105,7 @@ export default function Home() {
                 size="m"
                 prefixIcon="resume"
               >
-                Voir mon CV
+                Voir le CV
               </Button>
             </Row>
           </RevealFx>
