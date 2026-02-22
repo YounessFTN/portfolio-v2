@@ -18,7 +18,7 @@ const person: Person = {
   role: "Développeur Full Stack",
   avatar: "/images/avatar.webp",
   email: "youness@fatine.fr",
-  location: "Europe/Lyon",
+  location: "Europe/Paris",
   languages: ["Français", "Italien", "Anglais"],
 };
 
