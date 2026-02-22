@@ -1,20 +1,20 @@
+import "@/resources/custom.css";
 import "@once-ui-system/core/css/styles.css";
 import "@once-ui-system/core/css/tokens.css";
-import "@/resources/custom.css";
 
 import classNames from "classnames";
 
+import { Footer, Header, Providers, RouteGuard } from "@/components";
+import { baseURL, dataStyle, effects, fonts, home, style } from "@/resources";
 import {
   Background,
   Column,
   Flex,
   Meta,
-  opacity,
   RevealFx,
   SpacingToken,
+  opacity,
 } from "@once-ui-system/core";
-import { Footer, Header, RouteGuard, Providers } from "@/components";
-import { baseURL, effects, fonts, style, dataStyle, home } from "@/resources";
 
 export async function generateMetadata() {
   return Meta.generate({
@@ -45,6 +45,11 @@ export default async function RootLayout({
       )}
     >
       <head>
+        <script
+          defer
+          src="https://cloud.umami.is/script.js"
+          data-website-id="561260c0-a868-4271-921e-4cc75c67e850"
+        />
         <script
           id="theme-init"
           dangerouslySetInnerHTML={{
