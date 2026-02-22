@@ -32,7 +32,7 @@ const social: Social = [
   {
     name: "Resume",
     icon: "resume",
-    link: "/images/CV-Youness-Fatine-V2.pdf",
+    link: "/cv",
     essential: true,
   },
   {
@@ -318,4 +318,16 @@ const gallery: Gallery = {
   images: [],
 };
 
-export { about, blog, gallery, home, newsletter, person, social, work };
+// Configuration du CV - Modifier le chemin ici pour changer le fichier affiché
+const cv = {
+  path: "/cv",
+  label: "CV",
+  title: "CV",
+  description: `Curriculum Vitae de ${person.name} - ${person.role}`,
+  // Chemin vers le fichier PDF (relatif à /public)
+  file: "/images/CV-Youness-Fatine-V2.pdf",
+  // Nom du fichier lors du téléchargement
+  downloadName: "CV-Youness-Fatine.pdf",
+};
+
+export { about, blog, cv, gallery, home, newsletter, person, social, work };
