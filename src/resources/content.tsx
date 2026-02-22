@@ -18,7 +18,7 @@ const person: Person = {
   role: "Développeur Full Stack",
   avatar: "/images/avatar.webp",
   email: "youness@fatine.fr",
-  location: "Europe/Paris",
+  location: "Europe/Lyon",
   languages: ["Français", "Italien", "Anglais"],
 };
 
@@ -61,7 +61,9 @@ const home: Home = {
   label: "Accueil",
   title: `Portfolio de ${person.name}`,
   description: `Site portfolio présentant mon travail en tant que ${person.role}`,
-  headline: <>Créer des expériences numériques exceptionnelles</>,
+  headline: (
+    <>Transformer la donnée en solutions performantes et exploitables</>
+  ),
   featured: {
     display: true,
     title: (
@@ -85,8 +87,9 @@ const home: Home = {
       <Text as="span" size="xl" weight="strong">
         {person.business}
       </Text>
-      . Basé à Lyon, je conçois des interfaces modernes et des expériences
-      utilisateur intuitives.
+      . Basé à Lyon, je conçois des systèmes performants en manipulant et
+      structurant la donnée (API, SQL, backend + frontend) pour répondre à des
+      enjeux techniques exigeants.
     </>
   ),
 };
@@ -218,9 +221,7 @@ const about: About = {
       {
         title: "Front-end",
         description: (
-          <>
-            Développement d'interfaces modernes, réactives et performantes.
-          </>
+          <>Développement d'interfaces modernes, réactives et performantes.</>
         ),
         tags: [
           { name: "React", icon: "react" },
@@ -238,9 +239,7 @@ const about: About = {
       },
       {
         title: "Back-end",
-        description: (
-          <>Construction d'API robustes et évolutives.</>
-        ),
+        description: <>Construction d'API robustes et évolutives.</>,
         tags: [
           { name: "Node.js", icon: "nodejs" },
           { name: "PHP", icon: "php" },
@@ -256,9 +255,7 @@ const about: About = {
       },
       {
         title: "CMS & E-commerce",
-        description: (
-          <>Création de sites vitrines et boutiques en ligne.</>
-        ),
+        description: <>Création de sites vitrines et boutiques en ligne.</>,
         tags: [
           { name: "WordPress", icon: "wordpress" },
           { name: "Webflow", icon: "webflow" },
@@ -270,9 +267,7 @@ const about: About = {
       {
         title: "Design & Prototypage",
         description: (
-          <>
-            Conception de maquettes UX/UI, chartes graphiques et création 3D.
-          </>
+          <>Conception de maquettes UX/UI, chartes graphiques et création 3D.</>
         ),
         tags: [
           { name: "Figma", icon: "figma" },
