@@ -320,7 +320,7 @@ const cv = {
   title: `CV de ${person.name} - ${person.role}`,
   description: `Consultez et téléchargez le CV de ${person.name}, ${person.role}. Découvrez mon parcours, mes compétences techniques et mes expériences professionnelles.`,
   // Chemin vers le fichier PDF (relatif à /public)
-  file: "/images/CV-Youness-Fatine-V2.pdf",
+  file: "/images/CV-Youness-Fatine.pdf",
   // Nom du fichier lors du téléchargement
   downloadName: "CV-Youness-Fatine.pdf",
 };
