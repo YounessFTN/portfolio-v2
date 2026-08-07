@@ -14,7 +14,7 @@ const person: Person = {
   firstName: "Youness",
   lastName: "Fatine",
   name: `Youness Fatine`,
-  business: "Mintfull Agency",
+  business: "Freelance",
   role: "Développeur Full Stack",
   avatar: "/images/avatar.webp",
   email: "youness@fatine.fr",
@@ -83,13 +83,9 @@ const home: Home = {
       <Text as="span" size="xl" weight="strong">
         {person.role}
       </Text>{" "}
-      en alternance chez{" "}
-      <Text as="span" size="xl" weight="strong">
-        {person.business}
-      </Text>
-      . Basé à Lyon, je conçois des systèmes performants en manipulant et
-      structurant la donnée (API, SQL, backend + frontend) pour répondre à des
-      enjeux techniques exigeants.
+      en freelance. Basé à Lyon, je conçois des systèmes performants en
+      manipulant et structurant la donnée (API, SQL, backend + frontend) pour
+      répondre à des enjeux techniques exigeants.
     </>
   ),
 };
@@ -126,24 +122,6 @@ const about: About = {
     title: "Expérience professionnelle",
     experiences: [
       {
-        company: "Mintfull Agency",
-        timeframe: "2025 - Aujourd'hui",
-        role: "Développeur Web (alternance + stage)",
-        achievements: [
-          <p>
-            Création de sites WordPress et Symfony (Bootstrap, SCSS, PHP,
-            Oxygen, JavaScript).
-          </p>,
-          <p>
-            Développement de modules et de sites e-commerce sous PrestaShop
-            (Symfony, PHP).
-          </p>,
-          <p>Conception de maquettes UI/UX sur Figma.</p>,
-          <p>Compétences supplémentaires : Docker, SQL, Time Tracking.</p>,
-        ],
-        images: [],
-      },
-      {
         company: "Freelance",
         timeframe: "2024 - Aujourd'hui",
         role: "Développeur Web",
@@ -158,6 +136,24 @@ const about: About = {
           </p>,
           <p>Automatisation d'outils tiers (n8n, cal.com, Tally, Stripe).</p>,
           <p>Acquisition clients : prospection, contenu organique, setting.</p>,
+        ],
+        images: [],
+      },
+      {
+        company: "Mintfull Agency",
+        timeframe: "2025 - 2026",
+        role: "Développeur Web (alternance + stage)",
+        achievements: [
+          <p>
+            Création de sites WordPress et Symfony (Bootstrap, SCSS, PHP,
+            Oxygen, JavaScript).
+          </p>,
+          <p>
+            Développement de modules et de sites e-commerce sous PrestaShop
+            (Symfony, PHP).
+          </p>,
+          <p>Conception de maquettes UI/UX sur Figma.</p>,
+          <p>Compétences supplémentaires : Docker, SQL, Time Tracking.</p>,
         ],
         images: [],
       },
