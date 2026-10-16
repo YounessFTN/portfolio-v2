@@ -1,4 +1,4 @@
-import { Column, Heading, Icon, Row, SmartLink, Text } from "@once-ui-system/core";
+import { Column, Heading, Row, SmartLink, Text } from "@once-ui-system/core";
 import { contact, saas } from "@/resources";
 
 const offers = [
@@ -52,30 +52,6 @@ export const Offers = () => (
             <SmartLink href={offer.href} suffixIcon="arrowRight">
               {offer.cta}
             </SmartLink>
-          </Column>
-        ))}
-      </Row>
-    </Column>
-
-    <Column fillWidth gap="24">
-      <Heading as="h2" variant="display-strong-xs" wrap="balance">
-        Comment je travaille
-      </Heading>
-      <Row fillWidth gap="24" s={{ direction: "column" }}>
-        {contact.process.map((step, index) => (
-          <Column key={step.title} flex={1} gap="8">
-            <Row gap="8" vertical="center">
-              <Icon name="checkCircle" onBackground="brand-weak" size="s" />
-              <Text variant="label-strong-s" onBackground="brand-weak">
-                Étape {index + 1}
-              </Text>
-            </Row>
-            <Heading as="h3" variant="heading-strong-s">
-              {step.title}
-            </Heading>
-            <Text variant="body-default-s" onBackground="neutral-weak">
-              {step.description}
-            </Text>
           </Column>
         ))}
       </Row>

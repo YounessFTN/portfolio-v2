@@ -64,7 +64,7 @@ const home: Home = {
   title: `Développeur full stack freelance à Lyon | ${person.name}`,
   description: `Développeur full stack freelance à Lyon, je conçois votre SaaS, MVP ou application web sur mesure (Next.js, Node.js, Prisma, Stripe). Devis détaillé sous 48 h.`,
   headline: (
-    <>Je développe votre SaaS ou votre MVP, de l'idée à la mise en ligne</>
+    <>Votre SaaS, de l'idée à la mise en ligne.</>
   ),
   featured: {
     display: true,
