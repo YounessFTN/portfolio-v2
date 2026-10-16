@@ -1,4 +1,5 @@
-import { person, social } from "@/resources";
+import Link from "next/link";
+import { contact, person, saas, social, work } from "@/resources";
 import { IconButton, Row, Text } from "@once-ui-system/core";
 import styles from "./Footer.module.scss";
 
@@ -31,6 +32,17 @@ export const Footer = () => {
           <Text onBackground="neutral-weak">© {currentYear} /</Text>
           <Text paddingX="4">{person.name}</Text>
         </Text>
+        <Row as="nav" aria-label="Liens utiles" gap="16" wrap horizontal="center">
+          {[
+            { href: saas.path, label: "Création de SaaS" },
+            { href: work.path, label: "Projets" },
+            { href: contact.path, label: "Contact" },
+          ].map((item) => (
+            <Text key={item.href} variant="body-default-s" onBackground="neutral-weak">
+              <Link href={item.href}>{item.label}</Link>
+            </Text>
+          ))}
+        </Row>
         <Row gap="16">
           {social.map(
             (item) =>

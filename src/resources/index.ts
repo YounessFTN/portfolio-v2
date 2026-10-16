@@ -10,6 +10,7 @@ export {
   gallery,
   cv,
   contact,
+  saas,
 } from "./content";
 
 export {

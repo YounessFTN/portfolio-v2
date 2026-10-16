@@ -5,6 +5,7 @@ import { getPosts } from "@/utils/utils";
 import { Column, Heading } from "@once-ui-system/core";
 import { baseURL, work } from "@/resources";
 import { Projects } from "@/components/work/Projects";
+import { ContactCta } from "@/components";
 
 export async function generateMetadata() {
   return pageMetadata({ title: work.title, description: work.description, path: work.path });
@@ -42,6 +43,7 @@ export default function Work() {
         Projets & réalisations
       </Heading>
       <Projects />
+      <ContactCta title="Votre projet pourrait être le prochain" />
     </Column>
   );
 }

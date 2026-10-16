@@ -18,7 +18,7 @@ import { JsonLd } from "@/components/JsonLd";
 import { breadcrumb, project, webPage } from "@/resources/jsonld";
 import { pageMetadata } from "@/utils/metadata";
 import { formatDate } from "@/utils/formatDate";
-import { ScrollToHash, CustomMDX } from "@/components";
+import { ScrollToHash, CustomMDX, ContactCta } from "@/components";
 import { Metadata } from "next";
 import { Projects } from "@/components/work/Projects";
 
@@ -133,17 +133,7 @@ export default async function Project({
       <Column style={{ margin: "auto" }} as="article" maxWidth="xs">
         <CustomMDX source={post.content} />
       </Column>
-      <Column fillWidth gap="16" horizontal="center" align="center" marginTop="40">
-        <Heading as="h2" variant="heading-strong-l" wrap="balance">
-          Un projet similaire en tête ?
-        </Heading>
-        <Text onBackground="neutral-weak" wrap="balance">
-          SaaS, MVP ou application web sur mesure : décrivez votre besoin, je vous réponds sous 24 h.
-        </Text>
-        <Button href="/contact" data-border="rounded" arrowIcon>
-          Démarrer un projet
-        </Button>
-      </Column>
+      <ContactCta title="Un projet similaire en tête ?" />
       <Column fillWidth gap="40" horizontal="center" marginTop="40">
         <Line maxWidth="40" />
         <Heading as="h2" variant="heading-strong-xl" marginBottom="24">

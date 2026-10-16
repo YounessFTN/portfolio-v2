@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 
 import { Fade, Flex, Line, Row, ToggleButton } from "@once-ui-system/core";
 
-import { routes, display, person, about, blog, work, gallery, cv, contact } from "@/resources";
+import { routes, display, person, about, blog, work, gallery, cv, contact, saas } from "@/resources";
 import { ThemeToggle } from "./ThemeToggle";
 import styles from "./Header.module.scss";
 
@@ -126,6 +126,26 @@ export const Header = () => {
                       aria-label={work.label}
                       href="/work"
                       selected={pathname.startsWith("/work")}
+                    />
+                  </Row>
+                </>
+              )}
+              {routes["/services/creation-saas"] && (
+                <>
+                  <Row s={{ hide: true }}>
+                    <ToggleButton
+                      prefixIcon="rocket"
+                      href={saas.path}
+                      label="Services"
+                      selected={pathname.startsWith("/services")}
+                    />
+                  </Row>
+                  <Row hide s={{ hide: false }}>
+                    <ToggleButton
+                      prefixIcon="rocket"
+                      aria-label="Services"
+                      href={saas.path}
+                      selected={pathname.startsWith("/services")}
                     />
                   </Row>
                 </>

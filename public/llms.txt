@@ -5,6 +5,7 @@
 Ce site (https://www.fatine.fr) est son portfolio et sa page de contact. Langue : français (il travaille aussi en anglais et en italien). Les projets de démonstration listés ci-dessous sont des projets personnels ou d'études, pas des missions clients.
 
 ## Offre
+- [Création de logiciel SaaS sur mesure](https://www.fatine.fr/services/creation-saas): ce que comprend un SaaS développé sur mesure (comptes et rôles, abonnements Stripe, multi-entreprise, tableau de bord, back-office), méthode en 4 étapes, stack technique, budgets indicatifs, questions fréquentes.
 - [Contact et devis](https://www.fatine.fr/contact): prestations proposées (SaaS complet, MVP / prototype, application web métier, refonte / évolution, automatisation et intégrations), méthode en 4 étapes (appel découverte de 30 min, cadrage et devis détaillé sous 48 h, développement itératif avec livraisons régulières, mise en ligne et suivi), formulaire de projet.
 - [Prise de rendez-vous](https://cal.com/youness-fatine/entretien): appel découverte de 30 minutes.
 

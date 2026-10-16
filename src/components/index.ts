@@ -8,3 +8,4 @@ export { ScrollToHash } from "@/components/ScrollToHash";
 export { ThemeToggle } from "@/components/ThemeToggle";
 export { CustomMDX } from "@/components/mdx";
 export { JsonLd } from "@/components/JsonLd";
+export { ContactCta } from "@/components/ContactCta";

@@ -24,6 +24,7 @@ const routes: RoutesConfig = {
   "/gallery": false,
   "/cv": true,
   "/contact": true,
+  "/services/creation-saas": true,
 };
 
 const display: DisplayConfig = {

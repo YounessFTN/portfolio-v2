@@ -2,6 +2,7 @@ import { JsonLd } from "@/components/JsonLd";
 import { pageMetadata } from "@/utils/metadata";
 import { breadcrumb, ids, webPage } from "@/resources/jsonld";
 import TableOfContents from "@/components/about/TableOfContents";
+import { ContactCta } from "@/components";
 import styles from "@/components/about/about.module.scss";
 import { about, person, social } from "@/resources";
 import {
@@ -130,7 +131,7 @@ export default function About() {
                   name="calendar"
                   onBackground="brand-weak"
                 />
-                <Row paddingX="8">Planifier un entretien</Row>
+                <Row paddingX="8">Réserver un appel découverte</Row>
                 <IconButton
                   href={about.calendar.link}
                   data-border="rounded"
@@ -381,6 +382,7 @@ export default function About() {
           )}
         </Column>
       </Row>
+      <ContactCta title="Travaillons ensemble" />
     </Column>
   );
 }

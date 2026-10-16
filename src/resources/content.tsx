@@ -1,5 +1,6 @@
 import {
   About,
+  BasePageConfig,
   Blog,
   Contact,
   Gallery,
@@ -63,30 +64,30 @@ const home: Home = {
   title: `Développeur full stack freelance à Lyon | ${person.name}`,
   description: `Développeur full stack freelance à Lyon, je conçois votre SaaS, MVP ou application web sur mesure (Next.js, Node.js, Prisma, Stripe). Devis détaillé sous 48 h.`,
   headline: (
-    <>Transformer la donnée en solutions performantes et exploitables</>
+    <>Je développe votre SaaS ou votre MVP, de l'idée à la mise en ligne</>
   ),
   featured: {
     display: true,
     title: (
       <Row gap="12" vertical="center">
-        <strong className="ml-4">Projet</strong>{" "}
+        <strong className="ml-4">Projet à la une</strong>{" "}
         <Line background="brand-alpha-strong" vert height="20" />
         <Text marginRight="4" onBackground="brand-medium">
-          Projet à la une
+          Poukaves : app full stack Next.js & Prisma
         </Text>
       </Row>
     ),
-    href: "/work/iberic-x",
+    href: "/work/poukaves",
   },
   subline: (
     <>
       Salut, je suis {person.name},{" "}
       <Text as="span" size="xl" weight="strong">
-        {person.role}
+        développeur full stack freelance
       </Text>{" "}
-      en freelance. Basé à Lyon, je conçois des systèmes performants en
-      manipulant et structurant la donnée (API, SQL, backend + frontend) pour
-      répondre à des enjeux techniques exigeants.
+      basé à Lyon. Je conçois des SaaS, des MVP et des applications web métier
+      sur mesure : interface, API, base de données, paiements et mise en
+      production. Vous validez à chaque étape.
     </>
   ),
 };
@@ -112,9 +113,15 @@ const about: About = {
     title: "Introduction",
     description: (
       <>
-        Étudiant en 3ᵉ année d’informatique, je souhaite intégrer une 4ᵉ année
-        (Mastère) en tant que développeur full stack en alternance (2026/2027)
-        afin de renforcer mes compétences et d’acquérir une expérience.
+        Développeur full stack freelance basé à Lyon, j'accompagne depuis 2024
+        entrepreneurs, indépendants et PME dans la création de SaaS, de MVP et
+        d'applications web sur mesure : de la maquette Figma à la mise en
+        production, paiements Stripe et automatisations compris.
+        <br />
+        <br />
+        En parallèle, je poursuis un Mastère Ingénierie du Web à l'ESGI
+        (2026-2028) : je travaille chaque semaine sur des projets en production,
+        ce qui me garde à jour sur Next.js, Node.js, Docker et les bases SQL.
       </>
     ),
   },
@@ -125,18 +132,20 @@ const about: About = {
       {
         company: "Freelance",
         timeframe: "2024 - Aujourd'hui",
-        role: "Développeur Web",
+        role: "Développeur full stack (SaaS, applications web, e-commerce)",
         achievements: [
           <p>
-            Création de sites web (Webflow, React, Next.js, Shopify selon les
-            besoins clients).
+            Sites et applications web sur mesure : React, Next.js, Webflow ou
+            Shopify selon le besoin du client.
           </p>,
           <p>
-            Réalisation de maquettes UI/UX (charte graphique, Figma, design
-            system, Mockups).
+            Intégration de paiements et d'abonnements Stripe, prise de
+            rendez-vous (cal.com), formulaires (Tally) et automatisations n8n.
           </p>,
-          <p>Automatisation d'outils tiers (n8n, cal.com, Tally, Stripe).</p>,
-          <p>Acquisition clients : prospection, contenu organique, setting.</p>,
+          <p>
+            Conception UX/UI sur Figma (charte, design system) avant le
+            développement, pour valider le parcours avant d'écrire du code.
+          </p>,
         ],
         images: [],
       },
@@ -372,6 +381,13 @@ const contact: Contact = {
   ],
 };
 
+const saas: BasePageConfig = {
+  path: "/services/creation-saas",
+  label: "Création SaaS",
+  title: `Création de logiciel SaaS sur mesure à Lyon | ${person.name}`,
+  description: `Développeur freelance à Lyon, je crée votre logiciel SaaS sur mesure : cadrage, MVP, abonnements Stripe, comptes utilisateurs, mise en ligne et maintenance.`,
+};
+
 // Configuration du CV - Modifier le chemin ici pour changer le fichier affiché
 const cv = {
   path: "/cv",
@@ -393,6 +409,7 @@ export {
   home,
   newsletter,
   person,
+  saas,
   social,
   work,
 };

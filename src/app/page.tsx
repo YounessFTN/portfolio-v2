@@ -12,8 +12,9 @@ import {
   Row,
   Line,
 } from "@once-ui-system/core";
-import { home, about, person, routes, contact } from "@/resources";
-import { Mailchimp } from "@/components";
+import { home, about, person, routes, contact, saas } from "@/resources";
+import { ContactCta, Mailchimp } from "@/components";
+import { Offers } from "@/components/home/Offers";
 import { Projects } from "@/components/work/Projects";
 import { Posts } from "@/components/blog/Posts";
 
@@ -96,15 +97,17 @@ export default function Home() {
                   Démarrer un projet
                 </Button>
               )}
-              <Button
-                data-border="rounded"
-                href="/cv"
-                variant="tertiary"
-                size="m"
-                prefixIcon="resume"
-              >
-                Voir le CV
-              </Button>
+              {routes[saas.path as `/${string}`] && (
+                <Button
+                  data-border="rounded"
+                  href={saas.path}
+                  variant="tertiary"
+                  size="m"
+                  suffixIcon="arrowRight"
+                >
+                  Création SaaS
+                </Button>
+              )}
             </Row>
           </RevealFx>
         </Column>
@@ -132,7 +135,9 @@ export default function Home() {
           </Row>
         </Column>
       )}
+      <Offers />
       <Projects range={[2]} />
+      <ContactCta />
       <Mailchimp />
     </Column>
   );
