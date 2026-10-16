@@ -14,7 +14,7 @@ import {
   Media,
   Line,
 } from "@once-ui-system/core";
-import { baseURL, about, blog, person } from "@/resources";
+import { routes, baseURL, about, blog, person } from "@/resources";
 import { formatDate } from "@/utils/formatDate";
 import { getPosts } from "@/utils/utils";
 import { Metadata } from "next";
@@ -28,6 +28,8 @@ export async function generateStaticParams(): Promise<{ slug: string }[]> {
     slug: post.slug,
   }));
 }
+
+export const dynamicParams = false;
 
 export async function generateMetadata({
   params,
@@ -61,7 +63,7 @@ export default async function Blog({ params }: { params: Promise<{ slug: string 
 
   let post = getPosts(["src", "app", "blog", "posts"]).find((post) => post.slug === slugPath);
 
-  if (!post) {
+  if (!post || !routes["/blog"]) {
     notFound();
   }
 

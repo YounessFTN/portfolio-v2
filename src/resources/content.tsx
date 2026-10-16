@@ -60,8 +60,8 @@ const home: Home = {
   path: "/",
   image: "/images/og/home.jpg",
   label: "Accueil",
-  title: `Portfolio de ${person.name}`,
-  description: `Site portfolio présentant mon travail en tant que ${person.role}`,
+  title: `Développeur full stack freelance à Lyon | ${person.name}`,
+  description: `Développeur full stack freelance à Lyon, je conçois votre SaaS, MVP ou application web sur mesure (Next.js, Node.js, Prisma, Stripe). Devis détaillé sous 48 h.`,
   headline: (
     <>Transformer la donnée en solutions performantes et exploitables</>
   ),
@@ -94,8 +94,8 @@ const home: Home = {
 const about: About = {
   path: "/about",
   label: "À propos",
-  title: `À propos – ${person.name}`,
-  description: `Découvrez ${person.name}, ${person.role} basé à Lyon`,
+  title: `À propos – ${person.name}, développeur full stack freelance`,
+  description: `${person.name}, développeur full stack freelance à Lyon depuis 2024 et étudiant en Mastère Ingénierie du Web (ESGI). Parcours, stack technique et expériences.`,
   tableOfContent: {
     display: true,
     subItems: false,
@@ -298,8 +298,8 @@ const blog: Blog = {
 const work: Work = {
   path: "/work",
   label: "Projets",
-  title: `Projets – ${person.name}`,
-  description: `Projets de design et développement par ${person.name}`,
+  title: `Projets full stack & applications web | ${person.name}`,
+  description: `Projets full stack de ${person.name} : application Next.js et Prisma, e-commerce React avec Stripe, objets connectés, interfaces 3D. Contexte, rôle et choix techniques.`,
 };
 
 const gallery: Gallery = {
@@ -313,8 +313,8 @@ const gallery: Gallery = {
 const contact: Contact = {
   path: "/contact",
   label: "Contact",
-  title: `Contact – Création de logiciel SaaS sur mesure | ${person.name}`,
-  description: `Un projet de SaaS, de MVP ou d'application web ? ${person.name}, ${person.role} freelance à Lyon, conçoit et développe votre logiciel de A à Z.`,
+  title: `Contact & devis – Projet SaaS ou MVP | ${person.name}`,
+  description: `Un projet de SaaS, de MVP ou d'application web ? Décrivez-le en 2 minutes : appel découverte de 30 min offert et devis détaillé sous 48 h. Basé à Lyon.`,
   headline: <>Lançons votre logiciel SaaS</>,
   subline: (
     <>

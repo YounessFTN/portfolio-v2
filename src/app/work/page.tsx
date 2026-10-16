@@ -1,35 +1,45 @@
-import { Column, Heading, Meta, Schema } from "@once-ui-system/core";
-import { baseURL, about, person, work } from "@/resources";
+import { JsonLd } from "@/components/JsonLd";
+import { pageMetadata } from "@/utils/metadata";
+import { breadcrumb, webPage } from "@/resources/jsonld";
+import { getPosts } from "@/utils/utils";
+import { Column, Heading } from "@once-ui-system/core";
+import { baseURL, work } from "@/resources";
 import { Projects } from "@/components/work/Projects";
 
 export async function generateMetadata() {
-  return Meta.generate({
-    title: work.title,
-    description: work.description,
-    baseURL: baseURL,
-    image: `/api/og/generate?title=${encodeURIComponent(work.title)}`,
-    path: work.path,
-  });
+  return pageMetadata({ title: work.title, description: work.description, path: work.path });
 }
 
 export default function Work() {
   return (
     <Column maxWidth="m" paddingTop="24">
-      <Schema
-        as="webPage"
-        baseURL={baseURL}
-        path={work.path}
-        title={work.title}
-        description={work.description}
-        image={`/api/og/generate?title=${encodeURIComponent(work.title)}`}
-        author={{
-          name: person.name,
-          url: `${baseURL}${about.path}`,
-          image: `${baseURL}${person.avatar}`,
-        }}
+      <JsonLd
+        nodes={[
+          webPage({
+            type: "CollectionPage",
+            path: work.path,
+            name: work.title,
+            description: work.description,
+            extra: {
+              mainEntity: {
+                "@type": "ItemList",
+                itemListElement: getPosts(["src", "app", "work", "projects"]).map((post, index) => ({
+                  "@type": "ListItem",
+                  position: index + 1,
+                  url: `${baseURL}${work.path}/${post.slug}`,
+                  name: post.metadata.title,
+                })),
+              },
+            },
+          }),
+          breadcrumb([
+            { name: "Accueil", path: "/" },
+            { name: work.label, path: work.path },
+          ]),
+        ]}
       />
       <Heading marginBottom="l" variant="heading-strong-xl" align="center">
-        {work.title}
+        Projets & réalisations
       </Heading>
       <Projects />
     </Column>

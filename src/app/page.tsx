@@ -1,3 +1,6 @@
+import { JsonLd } from "@/components/JsonLd";
+import { pageMetadata } from "@/utils/metadata";
+import { webPage } from "@/resources/jsonld";
 import {
   Heading,
   Text,
@@ -7,40 +10,24 @@ import {
   Column,
   Badge,
   Row,
-  Schema,
-  Meta,
   Line,
 } from "@once-ui-system/core";
-import { home, about, person, baseURL, routes, contact } from "@/resources";
+import { home, about, person, routes, contact } from "@/resources";
 import { Mailchimp } from "@/components";
 import { Projects } from "@/components/work/Projects";
 import { Posts } from "@/components/blog/Posts";
 
 export async function generateMetadata() {
-  return Meta.generate({
-    title: home.title,
-    description: home.description,
-    baseURL: baseURL,
-    path: home.path,
-    image: home.image,
-  });
+  return pageMetadata({ title: home.title, description: home.description, path: home.path, image: home.image });
 }
 
 export default function Home() {
   return (
     <Column maxWidth="m" gap="xl" paddingY="12" horizontal="center">
-      <Schema
-        as="webPage"
-        baseURL={baseURL}
-        path={home.path}
-        title={home.title}
-        description={home.description}
-        image={`/api/og/generate?title=${encodeURIComponent(home.title)}`}
-        author={{
-          name: person.name,
-          url: `${baseURL}${about.path}`,
-          image: `${baseURL}${person.avatar}`,
-        }}
+      <JsonLd
+        nodes={[
+          webPage({ path: "/", name: home.title, description: home.description, image: home.image }),
+        ]}
       />
       <Column fillWidth horizontal="center" gap="m">
         <Column maxWidth="s" horizontal="center" align="center">
@@ -95,7 +82,7 @@ export default function Home() {
                       size="m"
                     />
                   )}
-                  {about.title}
+                  {about.label}
                 </Row>
               </Button>
               {routes["/contact"] && (

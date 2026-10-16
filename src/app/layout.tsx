@@ -4,7 +4,7 @@ import "@once-ui-system/core/css/tokens.css";
 
 import classNames from "classnames";
 
-import { Footer, Header, Providers, RouteGuard } from "@/components";
+import { Footer, Header, Providers } from "@/components";
 import { baseURL, dataStyle, effects, fonts, home, style } from "@/resources";
 import {
   Background,
@@ -35,7 +35,7 @@ export default async function RootLayout({
     <Flex
       suppressHydrationWarning
       as="html"
-      lang="en"
+      lang="fr"
       fillWidth
       className={classNames(
         fonts.heading.variable,
@@ -163,8 +163,8 @@ export default async function RootLayout({
           <Flex fillWidth minHeight="16" s={{ hide: true }} />
           <Header />
           <Flex zIndex={0} fillWidth padding="l" horizontal="center" flex={1}>
-            <Flex horizontal="center" fillWidth minHeight="0">
-              <RouteGuard>{children}</RouteGuard>
+            <Flex as="main" id="main" horizontal="center" fillWidth minHeight="0">
+              {children}
             </Flex>
           </Flex>
           <Footer />

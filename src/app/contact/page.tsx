@@ -1,43 +1,40 @@
+import { JsonLd } from "@/components/JsonLd";
+import { pageMetadata } from "@/utils/metadata";
+import { breadcrumb, ids, webPage } from "@/resources/jsonld";
 import { ContactForm } from "@/components/contact/ContactForm";
-import { baseURL, contact, person } from "@/resources";
+import { contact, person } from "@/resources";
 import {
   Button,
   Column,
   Heading,
   Icon,
   Line,
-  Meta,
   RevealFx,
   Row,
-  Schema,
   Text,
 } from "@once-ui-system/core";
 
 export async function generateMetadata() {
-  return Meta.generate({
-    title: contact.title,
-    description: contact.description,
-    baseURL: baseURL,
-    image: `/api/og/generate?title=${encodeURIComponent(contact.title)}`,
-    path: contact.path,
-  });
+  return pageMetadata({ title: contact.title, description: contact.description, path: contact.path });
 }
 
 export default function Contact() {
   return (
     <Column maxWidth="m" fillWidth gap="xl" paddingY="12">
-      <Schema
-        as="webPage"
-        baseURL={baseURL}
-        title={contact.title}
-        description={contact.description}
-        path={contact.path}
-        image={`/api/og/generate?title=${encodeURIComponent(contact.title)}`}
-        author={{
-          name: person.name,
-          url: `${baseURL}${contact.path}`,
-          image: `${baseURL}${person.avatar}`,
-        }}
+      <JsonLd
+        nodes={[
+          webPage({
+            type: "ContactPage",
+            path: contact.path,
+            name: contact.title,
+            description: contact.description,
+            extra: { mainEntity: { "@id": ids.service } },
+          }),
+          breadcrumb([
+            { name: "Accueil", path: "/" },
+            { name: contact.label, path: contact.path },
+          ]),
+        ]}
       />
 
       <Column fillWidth horizontal="center" align="center" gap="m">

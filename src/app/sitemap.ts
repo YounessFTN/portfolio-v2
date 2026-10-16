@@ -1,8 +1,11 @@
 import { getPosts } from "@/utils/utils";
 import { baseURL, routes as routesConfig } from "@/resources";
 
+// Update when page content changes, so lastmod stays meaningful for crawlers
+const SITE_LAST_UPDATED = "2026-10-17";
+
 export default async function sitemap() {
-  const blogs = getPosts(["src", "app", "blog", "posts"]).map((post) => ({
+  const blogs = (routesConfig["/blog"] ? getPosts(["src", "app", "blog", "posts"]) : []).map((post) => ({
     url: `${baseURL}/blog/${post.slug}`,
     lastModified: post.metadata.publishedAt,
   }));
@@ -18,7 +21,7 @@ export default async function sitemap() {
 
   const routes = activeRoutes.map((route) => ({
     url: `${baseURL}${route !== "/" ? route : ""}`,
-    lastModified: new Date().toISOString().split("T")[0],
+    lastModified: SITE_LAST_UPDATED,
   }));
 
   return [...routes, ...blogs, ...works];

@@ -1,0 +1,27 @@
+# Youness Fatine
+
+> Youness Fatine est développeur full stack freelance basé à Lyon (France). Il conçoit, développe et met en production des logiciels SaaS, MVP et applications web sur mesure (Next.js, React, Node.js, SQL, Prisma, Stripe), pour des clients à Lyon et partout en France. Réponse sous 24 h ouvrées.
+
+Ce site (https://www.fatine.fr) est son portfolio et sa page de contact. Langue : français (il travaille aussi en anglais et en italien). Les projets de démonstration listés ci-dessous sont des projets personnels ou d'études, pas des missions clients.
+
+## Offre
+- [Contact et devis](https://www.fatine.fr/contact): prestations proposées (SaaS complet, MVP / prototype, application web métier, refonte / évolution, automatisation et intégrations), méthode en 4 étapes (appel découverte de 30 min, cadrage et devis détaillé sous 48 h, développement itératif avec livraisons régulières, mise en ligne et suivi), formulaire de projet.
+- [Prise de rendez-vous](https://cal.com/youness-fatine/entretien): appel découverte de 30 minutes.
+
+## Profil
+- [À propos](https://www.fatine.fr/about): parcours (freelance depuis 2024, Mintfull Agency 2025-2026 en alternance et stage, formation WebTech Institute B3 Bachelor Informatique 2023-2026, ESGI M1 Mastère Ingénierie du Web 2026-2028), compétences techniques (front-end, back-end, CMS et e-commerce, design, DevOps).
+- [CV (PDF)](https://www.fatine.fr/images/CV-Youness-Fatine.pdf): CV téléchargeable.
+- [GitHub](https://github.com/YounessFTN)
+- [LinkedIn](https://www.linkedin.com/in/youness-fatine-developpeur-lyon/)
+
+## Projets
+- [Liste des projets](https://www.fatine.fr/work)
+- [Poukaves](https://www.fatine.fr/work/poukaves): plateforme anonyme et sécurisée de signalement de problèmes sociaux, environnementaux et civiques (Next.js, Prisma). Démo : https://poukaves.vercel.app/
+- [Iberic X](https://www.fatine.fr/work/iberic-x): site e-commerce fictif FC Barcelone x Nike (React, Tailwind CSS, Node.js, Stripe, maquettes Figma), 2024.
+- [Supp & Game](https://www.fatine.fr/work/supp-and-game): site d'un événement caritatif gaming avec éléments 3D, 2024.
+- [FitFull Box](https://www.fatine.fr/work/fitfull-box): site d'une marque fictive de box sportive, 2023.
+- [Bag Scanner](https://www.fatine.fr/work/bag-scanner): boîtier IoT (RFID, écran LCD, impression 3D), 2023.
+- [Portfolio V1](https://www.fatine.fr/work/portfolio-v1): premier portfolio en HTML, CSS et JavaScript, 2023.
+
+## Optional
+- [Sitemap](https://www.fatine.fr/sitemap.xml)

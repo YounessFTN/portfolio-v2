@@ -1,6 +1,9 @@
+import { JsonLd } from "@/components/JsonLd";
+import { pageMetadata } from "@/utils/metadata";
+import { breadcrumb, ids, webPage } from "@/resources/jsonld";
 import TableOfContents from "@/components/about/TableOfContents";
 import styles from "@/components/about/about.module.scss";
-import { about, baseURL, person, social } from "@/resources";
+import { about, person, social } from "@/resources";
 import {
   Avatar,
   Button,
@@ -9,22 +12,14 @@ import {
   Icon,
   IconButton,
   Media,
-  Meta,
   Row,
-  Schema,
   Tag,
   Text,
 } from "@once-ui-system/core";
 import React from "react";
 
 export async function generateMetadata() {
-  return Meta.generate({
-    title: about.title,
-    description: about.description,
-    baseURL: baseURL,
-    image: `/api/og/generate?title=${encodeURIComponent(about.title)}`,
-    path: about.path,
-  });
+  return pageMetadata({ title: about.title, description: about.description, path: about.path });
 }
 
 export default function About() {
@@ -52,18 +47,20 @@ export default function About() {
   ];
   return (
     <Column maxWidth="m">
-      <Schema
-        as="webPage"
-        baseURL={baseURL}
-        title={about.title}
-        description={about.description}
-        path={about.path}
-        image={`/api/og/generate?title=${encodeURIComponent(about.title)}`}
-        author={{
-          name: person.name,
-          url: `${baseURL}${about.path}`,
-          image: `${baseURL}${person.avatar}`,
-        }}
+      <JsonLd
+        nodes={[
+          webPage({
+            type: "ProfilePage",
+            path: about.path,
+            name: about.title,
+            description: about.description,
+            extra: { mainEntity: { "@id": ids.person } },
+          }),
+          breadcrumb([
+            { name: "Accueil", path: "/" },
+            { name: about.label, path: about.path },
+          ]),
+        ]}
       />
       {about.tableOfContent.display && (
         <Column

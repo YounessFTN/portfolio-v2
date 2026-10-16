@@ -1,32 +1,31 @@
+import { JsonLd } from "@/components/JsonLd";
+import { pageMetadata } from "@/utils/metadata";
+import { breadcrumb, ids, webPage } from "@/resources/jsonld";
 import CVContent from "@/components/cv/CVContent";
-import { baseURL, cv, person } from "@/resources";
-import { Column, Heading, Meta, Schema, Text } from "@once-ui-system/core";
+import { cv } from "@/resources";
+import { Column, Heading, Text } from "@once-ui-system/core";
 
 export async function generateMetadata() {
-  return Meta.generate({
-    title: cv.title,
-    description: cv.description,
-    baseURL: baseURL,
-    image: `/api/og/generate?title=${encodeURIComponent(cv.title)}`,
-    path: cv.path,
-  });
+  return pageMetadata({ title: cv.title, description: cv.description, path: cv.path });
 }
 
 export default function CVPage() {
   return (
     <Column maxWidth="m" fillWidth paddingY="xl" horizontal="center">
-      <Schema
-        as="webPage"
-        baseURL={baseURL}
-        title={cv.title}
-        description={cv.description}
-        path={cv.path}
-        image={`/api/og/generate?title=${encodeURIComponent(cv.title)}`}
-        author={{
-          name: person.name,
-          url: `${baseURL}${cv.path}`,
-          image: `${baseURL}${person.avatar}`,
-        }}
+      <JsonLd
+        nodes={[
+          webPage({
+            type: "ProfilePage",
+            path: cv.path,
+            name: cv.title,
+            description: cv.description,
+            extra: { mainEntity: { "@id": ids.person } },
+          }),
+          breadcrumb([
+            { name: "Accueil", path: "/" },
+            { name: cv.label, path: cv.path },
+          ]),
+        ]}
       />
 
       <Column fillWidth horizontal="center" gap="m" marginBottom="l">

@@ -1,5 +1,5 @@
 import { ImageResponse } from "next/og";
-import { baseURL, person } from "@/resources";
+import { person } from "@/resources";
 
 export const runtime = "nodejs";
 
@@ -21,6 +21,10 @@ export async function GET(request: Request) {
 
     throw new Error("failed to load font data");
   }
+
+  // Satori (next/og) does not support WebP, so use the JPEG avatar served by this same deployment
+  const avatar = `${url.origin}/images/avatar.jpg`;
+  const font = await loadGoogleFont("Geist:wght@400").catch(() => null);
 
   return new ImageResponse(
     <div
@@ -63,7 +67,7 @@ export async function GET(request: Request) {
           }}
         >
           <img
-            src={baseURL + person.avatar}
+            src={avatar}
             style={{
               width: "12rem",
               height: "12rem",
@@ -106,13 +110,8 @@ export async function GET(request: Request) {
     {
       width: 1280,
       height: 720,
-      fonts: [
-        {
-          name: "Geist",
-          data: await loadGoogleFont("Geist:wght@400"),
-          style: "normal",
-        },
-      ],
+      fonts: font ? [{ name: "Geist", data: font, style: "normal" }] : undefined,
+      headers: { "Cache-Control": "public, max-age=86400, s-maxage=31536000, immutable" },
     },
   );
 }
