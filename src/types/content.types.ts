@@ -226,6 +226,35 @@ export interface Blog extends BasePageConfig {}
 export interface Work extends BasePageConfig {}
 
 /**
+ * Contact page configuration.
+ * @description Configuration for the Contact page: client acquisition form, call booking and process.
+ */
+export interface Contact extends BasePageConfig {
+  /** Main headline of the page */
+  headline: React.ReactNode;
+  /** Text displayed below the headline */
+  subline: React.ReactNode;
+  /** Call booking link (cal.com, Calendly...) */
+  calendar: {
+    display: boolean;
+    link: string;
+  };
+  /** Average response time shown to visitors */
+  responseTime: string;
+  /** Project types selectable in the form */
+  projectTypes: string[];
+  /** Budget ranges selectable in the form */
+  budgets: string[];
+  /** Timeline options selectable in the form */
+  timelines: string[];
+  /** Steps of the collaboration process */
+  process: Array<{
+    title: string;
+    description: React.ReactNode;
+  }>;
+}
+
+/**
  * Gallery page configuration.
  * @description Configuration for the Gallery page, including metadata, navigation label, and image list.
  */

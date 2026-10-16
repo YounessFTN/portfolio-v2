@@ -1,6 +1,7 @@
 import {
   About,
   Blog,
+  Contact,
   Gallery,
   Home,
   Newsletter,
@@ -309,6 +310,68 @@ const gallery: Gallery = {
   images: [],
 };
 
+const contact: Contact = {
+  path: "/contact",
+  label: "Contact",
+  title: `Contact – Création de logiciel SaaS sur mesure | ${person.name}`,
+  description: `Un projet de SaaS, de MVP ou d'application web ? ${person.name}, ${person.role} freelance à Lyon, conçoit et développe votre logiciel de A à Z.`,
+  headline: <>Lançons votre logiciel SaaS</>,
+  subline: (
+    <>
+      De l'idée au produit en ligne : je conçois, développe et mets en
+      production des SaaS et applications web sur mesure. Décrivez votre projet,
+      je reviens vers vous avec une première estimation.
+    </>
+  ),
+  calendar: {
+    display: true,
+    link: "https://cal.com/youness-fatine/entretien",
+  },
+  responseTime: "Réponse sous 24 h ouvrées",
+  projectTypes: [
+    "SaaS complet",
+    "MVP / prototype",
+    "Application web métier",
+    "Refonte / évolution",
+    "Automatisation & intégrations",
+    "Autre",
+  ],
+  budgets: [
+    "Moins de 3 000 €",
+    "3 000 – 8 000 €",
+    "8 000 – 20 000 €",
+    "Plus de 20 000 €",
+    "Je ne sais pas encore",
+  ],
+  timelines: ["Dès que possible", "Sous 1 à 3 mois", "Plus tard / exploratoire"],
+  process: [
+    {
+      title: "Appel découverte",
+      description: (
+        <>30 minutes pour comprendre votre besoin, vos utilisateurs et vos contraintes.</>
+      ),
+    },
+    {
+      title: "Cadrage & devis",
+      description: (
+        <>Périmètre du MVP, choix techniques, planning et devis détaillé sous 48 h.</>
+      ),
+    },
+    {
+      title: "Développement itératif",
+      description: (
+        <>Livraisons régulières sur un environnement de test : vous validez à chaque étape.</>
+      ),
+    },
+    {
+      title: "Mise en ligne & suivi",
+      description: (
+        <>Déploiement, paiements, monitoring, puis maintenance et nouvelles fonctionnalités.</>
+      ),
+    },
+  ],
+};
+
 // Configuration du CV - Modifier le chemin ici pour changer le fichier affiché
 const cv = {
   path: "/cv",
@@ -321,4 +384,15 @@ const cv = {
   downloadName: "CV-Youness-Fatine.pdf",
 };
 
-export { about, blog, cv, gallery, home, newsletter, person, social, work };
+export {
+  about,
+  blog,
+  contact,
+  cv,
+  gallery,
+  home,
+  newsletter,
+  person,
+  social,
+  work,
+};

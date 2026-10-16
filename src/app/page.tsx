@@ -11,7 +11,7 @@ import {
   Meta,
   Line,
 } from "@once-ui-system/core";
-import { home, about, person, baseURL, routes } from "@/resources";
+import { home, about, person, baseURL, routes, contact } from "@/resources";
 import { Mailchimp } from "@/components";
 import { Projects } from "@/components/work/Projects";
 import { Posts } from "@/components/blog/Posts";
@@ -98,6 +98,17 @@ export default function Home() {
                   {about.title}
                 </Row>
               </Button>
+              {routes["/contact"] && (
+                <Button
+                  data-border="rounded"
+                  href={contact.path}
+                  variant="primary"
+                  size="m"
+                  prefixIcon="rocket"
+                >
+                  Démarrer un projet
+                </Button>
+              )}
               <Button
                 data-border="rounded"
                 href="/cv"
