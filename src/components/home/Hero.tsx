@@ -50,7 +50,7 @@ export const Hero = () => (
             data-border="rounded"
             prefixIcon="calendar"
           >
-            Réserver un appel de 30 min
+            Réserver un appel découverte
           </Button>
         )}
       </div>

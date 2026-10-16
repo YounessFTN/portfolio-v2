@@ -82,7 +82,7 @@ export default function Contact() {
                   <Text variant="heading-strong-s">Vous préférez en parler ?</Text>
                 </Row>
                 <Text variant="body-default-s" onBackground="neutral-weak">
-                  Réservez un appel découverte gratuit de 30 minutes pour présenter votre
+                  Réservez un appel découverte gratuit d'une heure pour présenter votre
                   projet de vive voix.
                 </Text>
                 <Button

@@ -6,8 +6,8 @@ Ce site (https://www.fatine.fr) est son portfolio et sa page de contact. Langue 
 
 ## Offre
 - [Création de logiciel SaaS sur mesure](https://www.fatine.fr/services/creation-saas): ce que comprend un SaaS développé sur mesure (comptes et rôles, abonnements Stripe, multi-entreprise, tableau de bord, back-office), méthode en 4 étapes, stack technique, budgets indicatifs, questions fréquentes.
-- [Contact et devis](https://www.fatine.fr/contact): prestations proposées (SaaS complet, MVP / prototype, application web métier, refonte / évolution, automatisation et intégrations), méthode en 4 étapes (appel découverte de 30 min, cadrage et devis détaillé sous 48 h, développement itératif avec livraisons régulières, mise en ligne et suivi), formulaire de projet.
-- [Prise de rendez-vous](https://cal.com/youness-fatine/entretien): appel découverte de 30 minutes.
+- [Contact et devis](https://www.fatine.fr/contact): prestations proposées (SaaS complet, MVP / prototype, application web métier, refonte / évolution, automatisation et intégrations), méthode en 4 étapes (appel découverte d'une heure, cadrage et devis détaillé sous 48 h, développement itératif avec livraisons régulières, mise en ligne et suivi), formulaire de projet.
+- [Prise de rendez-vous](https://cal.com/youness-fatine/rendez-vous): appel découverte d'une heure.
 
 ## Profil
 - [À propos](https://www.fatine.fr/about): parcours (freelance depuis 2024, Mintfull Agency 2025-2026 en alternance et stage, formation WebTech Institute B3 Bachelor Informatique 2023-2026, ESGI M1 Mastère Ingénierie du Web 2026-2028), compétences techniques (front-end, back-end, CMS et e-commerce, design, DevOps).

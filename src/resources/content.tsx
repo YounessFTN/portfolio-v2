@@ -106,7 +106,7 @@ const about: About = {
   },
   calendar: {
     display: true,
-    link: "https://cal.com/youness-fatine/entretien",
+    link: "https://cal.com/youness-fatine/rendez-vous",
   },
   intro: {
     display: true,
@@ -323,7 +323,7 @@ const contact: Contact = {
   path: "/contact",
   label: "Contact",
   title: `Contact & devis – Projet SaaS ou MVP | ${person.name}`,
-  description: `Un projet de SaaS, de MVP ou d'application web ? Décrivez-le en 2 minutes : appel découverte de 30 min offert et devis détaillé sous 48 h. Basé à Lyon.`,
+  description: `Un projet de SaaS, de MVP ou d'application web ? Décrivez-le en 2 minutes : appel découverte d'une heure offert et devis détaillé sous 48 h. Basé à Lyon.`,
   headline: <>Lançons votre logiciel SaaS</>,
   subline: (
     <>
@@ -334,7 +334,7 @@ const contact: Contact = {
   ),
   calendar: {
     display: true,
-    link: "https://cal.com/youness-fatine/entretien",
+    link: "https://cal.com/youness-fatine/rendez-vous",
   },
   responseTime: "Réponse sous 24 h ouvrées",
   projectTypes: [
@@ -357,7 +357,7 @@ const contact: Contact = {
     {
       title: "Appel découverte",
       description: (
-        <>30 minutes pour comprendre votre besoin, vos utilisateurs et vos contraintes.</>
+        <>Une heure pour comprendre votre besoin, vos utilisateurs et vos contraintes.</>
       ),
     },
     {

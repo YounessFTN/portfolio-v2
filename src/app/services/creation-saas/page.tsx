@@ -195,7 +195,7 @@ export default function CreationSaas() {
             prefixIcon="calendar"
             size="l"
           >
-            Réserver un appel de 30 min
+            Réserver un appel d'une heure
           </Button>
         </Row>
       </Column>
